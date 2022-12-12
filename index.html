@@ -18,24 +18,26 @@
 
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="row">
-          <div class="col-6">
-            <h1>Parma</h1>
-            <ul>
-              <li>Monday, 19:23</li>
-              <li>05, Dec 2022</li>
-              <li>Mist</li>
-            </ul>
-          </div>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-6">
+              <h1 id="city">Parma</h1>
+              <ul>
+                <li id=" day">Monday, 19:23</li>
+                <li id="date">05, Dec 2022</li>
+                <li id="weather-description">Mist</li>
+              </ul>
+            </div>
 
-          <div class="col-6">
-            9°C|F
-            <ul>
-              <li>Precipitation:0%</li>
-              <li>Humidity: 20%</li>
-              <li>wind: 3km/h</li>
-            </ul>
+            <div class="col-6">
+              <strong id="temperature">9</strong> <span> °C|°F</span>
+              <ul>
+                <li>Precipitation:0%</li>
+                <li id="humidity">Humidity: 20%</li>
+                <li id="wind-speed">wind: 3km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>
