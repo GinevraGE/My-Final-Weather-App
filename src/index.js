@@ -1,3 +1,28 @@
+function formatMonth(today) {
+  let todayIndex = now.getDate();
+  let currentMonth = now.getMonth();
+  let currentYear = now.getFullYear();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[currentMonth];
+  return `${todayIndex}, ${month}. ${currentYear}`;
+}
+let now = new Date();
+let todayElement = document.querySelector("#month-year");
+todayElement.innerHTML = formatMonth(now);
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -21,34 +46,6 @@ function formatDate(timestamp) {
 
   return `${day}, ${hours}:${minutes}`;
 }
-
-function formatMonth(today) {
-  let todayIndex = now.getDate();
-  let currentMonth = now.getMonth();
-  let currentYear = now.getFullYear();
-
-  let months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-
-  let month = months[currentMonth];
-  return `${todayIndex}, ${month}. ${currentYear}`;
-}
-
-let now = new Date();
-let todayElement = document.querySelector("#month-year");
-todayElement.innerHTML = formatMonth(now);
 
 function displayTemperature(response) {
   console.log(response.data);
