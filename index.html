@@ -12,7 +12,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
@@ -23,16 +23,16 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-6">
-              <h1 id="city">Parma</h1>
+              <h1 id="city"></h1>
               <ul>
                 <li id=" day">Monday, 19:23</li>
                 <li id="date">05, Dec 2022</li>
-                <li id="weather-description">Mist</li>
+                <li><span id="weather-description"></span></li>
               </ul>
             </div>
 
             <div class="col-6">
-              <strong id="temperature">9</strong> <span> °C|°F</span>
+              <strong id="temperature"></strong> <span> °C|°F</span>
               <ul>
                 <li>Precipitation:0%</li>
                 <li id="humidity">Humidity: 20%</li>
