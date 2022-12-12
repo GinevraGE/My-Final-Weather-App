@@ -29,3 +29,9 @@ ul {
   border: 1px solid #dadde1;
   border-radius: 10px;
 }
+#temperature {
+  color: #272142;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
