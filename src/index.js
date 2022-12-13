@@ -48,7 +48,8 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
+  console.log(response.data.condition.icon);
+  console.log(apiUrl);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let conditionElement = document.querySelector("#weather-description");
@@ -56,6 +57,7 @@ function displayTemperature(response) {
   let feelsLikeElement = document.querySelector("#feels-like");
   let windElement = document.querySelector("#wind-speed");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
@@ -64,9 +66,13 @@ function displayTemperature(response) {
   feelsLikeElement.innerHTML = Math.round(response.data.temperature.feels_like);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
 }
 
 let apiKey = `dfa836f02b3ot61e0f995ec04f06a183`;
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query={Parma}&key=${apiKey}`;
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query={colorno}&key=${apiKey}`;
 
 axios.get(apiUrl).then(displayTemperature);
