@@ -70,7 +70,18 @@ function displayTemperature(response) {
   );
 }
 
-let apiKey = `dfa836f02b3ot61e0f995ec04f06a183`;
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query={colorno}&key=${apiKey}`;
+function search(city) {
+  let apiKey = `dfa836f02b3ot61e0f995ec04f06a183`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
