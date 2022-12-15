@@ -17,9 +17,10 @@ li {
   margin-bottom: 0%;
 }
 
-li .weather-description {
+.weather-description {
   font-size: small;
   font-style: italic;
+  opacity: 0.7;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -29,7 +30,7 @@ ul {
   padding: 0;
 }
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 500px;
   margin: 40px auto;
 }
 .weather-app {
@@ -60,4 +61,32 @@ ul {
   font-size: 40px;
   margin-top: -60px;
   margin-left: -15px;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forcast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forcast-temp-min {
+  opacity: 0.5;
+}
+.weather-forecast-temps {
+  font-size: 13px;
+}
+
+.dawn {
+  margin-top: 10px;
+}
+
+.more-conditions {
+  margin-top: 10px;
+}
+
+.feels-like {
+  opacity: 0.7;
+  font-style: italic;
+  font-size: small;
 }

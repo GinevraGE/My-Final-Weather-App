@@ -48,8 +48,8 @@
               <ul>
                 <li id="date"></li>
                 <li id="month-year"></li>
-                <li>
-                  <small> <span id="weather-description"></span></small>
+                <li class="weather-description">
+                  <span id="weather-description"></span>
                 </li>
               </ul>
               <div class="dawn">
@@ -75,10 +75,30 @@
 
               <div class="conditions">
                 <ul>
-                  <li>Feels like: <span id="feels-like"></span>°</li>
-                  <li>Humidity:<span id="humidity"></span>%</li>
-                  <li>Wind-speed: <span id="wind-speed"> </span>Km/Hr</li>
+                  <li class="feels-like">
+                    Feels like: <span id="feels-like"></span>°
+                  </li>
+                  <div class="more-conditions">
+                    <li>Humidity:<span id="humidity"></span>%</li>
+                    <li>Wind-speed: <span id="wind-speed"> </span>Km/hr</li>
+                  </div>
                 </ul>
+              </div>
+            </div>
+          </div>
+          <div class="weather-forecast">
+            <div class="row">
+              <div class="col-2">
+                <div class="weather-forecast-date">Sun</div>
+                <img
+                  src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-night.png"
+                  alt=""
+                  width="42"
+                />
+                <div class="weather-forecast-temps">
+                  <span class="weather-forecast-temp-max">18°</span>
+                  <span class="weather-forecast-temp-min">12°</span>
+                </div>
               </div>
             </div>
           </div>
