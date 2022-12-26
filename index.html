@@ -44,18 +44,15 @@
           <div class="overview"><h1 id="city"></h1></div>
           <div class="row">
             <div class="col-6">
-              <div class="d-flex current-day"></div>
-              <ul>
-                <li id="date"></li>
-                <li id="month-year"></li>
-                <li class="weather-description">
-                  <span id="weather-description"></span>
-                </li>
-              </ul>
-              <div class="dawn">
+              <div class="current-day">
                 <ul>
-                  <li>Sunrise: 7:10 am</li>
-                  <li>Sunset: 4:15 pm</li>
+                  <li id="date"></li>
+                  <li id="month-year"></li>
+                </ul>
+              </div>
+              <div class="humidity">
+                <ul>
+                  <li>Humidity:<span id="humidity"></span>%</li>
                 </ul>
               </div>
             </div>
@@ -78,10 +75,15 @@
                   <li class="feels-like">
                     Feels like: <span id="feels-like"></span>°
                   </li>
-                  <div class="more-conditions">
-                    <li>Humidity:<span id="humidity"></span>%</li>
-                    <li>Wind-speed: <span id="wind-speed"> </span>Km/hr</li>
-                  </div>
+                  <li class="weather-description">
+                    <span id="weather-description"></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="wind-speed">
+                <ul>
+                  <li>Wind-speed: <span id="wind-speed"> </span>Km/hr</li>
                 </ul>
               </div>
             </div>
