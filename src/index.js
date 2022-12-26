@@ -92,7 +92,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = `dfa836f02b3ot61e0f995ec04f06a183`;
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
   console.log(apiUrl);
@@ -166,3 +165,15 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("Parma");
+
+function changeTheme() {
+  let body = document.querySelector("body");
+  body.classList.toggle("dark");
+}
+let themeButton = document.querySelector(".theme-button");
+themeButton.addEventListener("click", changeTheme);
+
+function clickNewsButton() {
+  let newsButton = document.querySelector(".news-info");
+  newsButton.addEventListener("click", clickNewsButton);
+}
